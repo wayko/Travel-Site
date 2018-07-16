@@ -10331,11 +10331,14 @@ return jQuery;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 
 
 
 var mobileMenu = new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* default */]();
-var revealOnScroll = new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */](__WEBPACK_IMPORTED_MODULE_2_jquery___default()(".feature-item"), "85%");
+new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */](__WEBPACK_IMPORTED_MODULE_2_jquery___default()(".testimonial"), "60%");
 
 /***/ }),
 /* 2 */
@@ -10376,8 +10379,9 @@ class MobileMenu {
 
 
 class RevealOnScroll {
-	constructor() {
-		this.itemsToReveal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".feature-item");
+	constructor(els, offset) {
+		this.itemsToReveal = els;
+		this.offsetPercentage = offset;
 		this.hideInitially();
 		this.createWaypoints();
 	}
@@ -10385,6 +10389,7 @@ class RevealOnScroll {
 		this.itemsToReveal.addClass("reveal-item");
 	}
 	createWaypoints() {
+		var that = this;
 		this.itemsToReveal.each(function () {
 			var currentItem = this;
 			new Waypoint({
@@ -10392,7 +10397,7 @@ class RevealOnScroll {
 				handler: function () {
 					__WEBPACK_IMPORTED_MODULE_0_jquery___default()(currentItem).addClass("reveal-item--is-visible");
 				},
-				offset: "85%"
+				offset: that.offsetPercentage
 			});
 		});
 	}
