@@ -4,7 +4,7 @@ class RevealOnScroll
 {
 	constructor()
 	{
-		this.itemsToReveal = $(".feature-item");
+		this.itemsToReveal = $(".feature-item, .testimonial");
 		this.hideInitially();
 		this.createWaypoints();
 	}
