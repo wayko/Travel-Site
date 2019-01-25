@@ -11189,7 +11189,15 @@ class StickyHeader {
 		this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header");
 		this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".large-hero__title");
 		this.createHeaderWaypoint();
+<<<<<<< HEAD
 	}
+=======
+		this.pageSections = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".page-section");
+		this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".primary-nav a");
+		this.createPageSectionWaypoints();
+	}
+
+>>>>>>> stick-header
 	createHeaderWaypoint() {
 		var that = this;
 		new Waypoint({
@@ -11204,8 +11212,41 @@ class StickyHeader {
 			}
 		});
 	}
+<<<<<<< HEAD
 }
 
+=======
+
+	createPageSectionWaypoints() {
+		var that = this;
+		this.pageSections.each(function () {
+			var currentPageSection = this;
+			new Waypoint({
+				element: currentPageSection,
+				handler: function (direction) {
+					if (direction == "down") {
+						var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+						that.headerLinks.removeClass("is-current-link");
+						__WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass("is-current-link");
+					}
+				},
+				offset: "20%"
+			});
+			new Waypoint({
+				element: currentPageSection,
+				handler: function (direction) {
+					if (direction == "up") {
+						var matchingHeaderLink = currentPageSection.getAttribute("data-matching-link");
+						that.headerLinks.removeClass("is-current-link");
+						__WEBPACK_IMPORTED_MODULE_0_jquery___default()(matchingHeaderLink).addClass("is-current-link");
+					}
+				},
+				offset: "-52%"
+			});
+		});
+	}
+}
+>>>>>>> stick-header
 /* harmony default export */ __webpack_exports__["a"] = (StickyHeader);
 
 /***/ })
