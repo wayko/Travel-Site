@@ -1,10 +1,7 @@
 import $ from 'jquery';
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
-<<<<<<< HEAD
 
-=======
 import smoothScroll from 'jquery-smooth-scroll';
->>>>>>> stick-header
 class StickyHeader
 {
 	constructor()
@@ -12,9 +9,6 @@ class StickyHeader
 		this.siteHeader = $(".site-header");
 		this.headerTriggerElement = $(".large-hero__title");
 		this.createHeaderWaypoint();
-<<<<<<< HEAD
-	}
-=======
 		this.pageSections = $(".page-section");
 		this.headerLinks =$(".primary-nav a");
 		this.createPageSectionWaypoints();
@@ -26,7 +20,7 @@ class StickyHeader
 		this.headerLinks.smoothScroll();
 	}
 	
->>>>>>> stick-header
+
 	createHeaderWaypoint()
 	{
 		var that = this;
@@ -46,10 +40,10 @@ class StickyHeader
 			}
 		});
 	}
-<<<<<<< HEAD
-}
 
-=======
+
+
+ 
 	
 	createPageSectionWaypoints()
 	{
@@ -88,5 +82,4 @@ class StickyHeader
 		});
 	}
 }
->>>>>>> stick-header
 export default StickyHeader;
