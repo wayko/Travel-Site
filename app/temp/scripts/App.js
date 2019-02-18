@@ -11216,7 +11216,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var mobileMenu = new __WEBPACK_IMPORTED_MODULE_0__modules_MobileMenu__["a" /* default */]();
-new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */](__WEBPACK_IMPORTED_MODULE_2_jquery___default()(".feature-item"), "85%");
+new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */](__WEBPACK_IMPORTED_MODULE_2_jquery___default()(".feature-item"), "86%");
 new __WEBPACK_IMPORTED_MODULE_1__modules_RevealOnScroll__["a" /* default */](__WEBPACK_IMPORTED_MODULE_2_jquery___default()(".testimonial"), "60%");
 var stickyHeader = new __WEBPACK_IMPORTED_MODULE_3__modules_StickyHeader__["a" /* default */]();
 var modal = new __WEBPACK_IMPORTED_MODULE_4__modules_Modal__["a" /* default */]();
